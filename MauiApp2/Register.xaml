@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Register"
+             Title="Register">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Grid Grid.Row="1">
+            <Frame >
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Register"
+               FontSize="40"
+               FontAttributes="Bold"
+               Margin="0,0,20,20"
+               HorizontalOptions="Center"/>
+
+                    <Label Text="Username"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,15,10,0"/>
+                    <Frame HorizontalOptions="FillAndExpand">
+                        <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Entry x:Name="rUsername"
+                           Placeholder="Username" 
+                           HorizontalOptions="FillAndExpand"
+                           WidthRequest="250"
+                           HeightRequest="40"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           Margin="0,0,20,10"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Label Text="Email"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,15,10,0"/>
+                    <Frame HorizontalOptions="FillAndExpand">
+                        <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Entry x:Name="Email"
+                       Placeholder="Email" 
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="250"
+                       HeightRequest="40"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Margin="0,0,20,10"/>
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="Password"
+               FontSize="20"
+               FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,20,10"/>
+                    <Frame HorizontalOptions="FillAndExpand">
+                        <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Entry x:Name="rPassword"
+                Placeholder="Password" 
+               HorizontalOptions="FillAndExpand"
+               WidthRequest="250"
+               HeightRequest="40"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,0,20,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Label Text="Confirm Password"
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Margin="0,0,20,10"/>
+                    <Frame HorizontalOptions="FillAndExpand">
+                        <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Entry x:Name="ConfirmPassword"
+                        Placeholder="ConfirmPassword" 
+                        HorizontalOptions="FillAndExpand"
+                        WidthRequest="250"
+                        HeightRequest="40"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        Margin="0,0,20,0"/>
+                        </StackLayout>
+                    </Frame>
+                    <Button x:Name="btnRegister" Text="Register" BackgroundColor="DarkBlue" Margin="0,15,20,20" HorizontalOptions="Center" IsEnabled="True" Clicked="RegisterClick"/>
+
+                    <StackLayout>
+                            <Label Text="Already registered, click here?" TextColor="Aqua" >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="alreadyReg"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                </StackLayout>
+
+
+            </Frame>
+
+        </Grid>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.LoginPage"
+             Title="LoginPage"
+             BackgroundColor="LightBlue">
+
+
+    <Grid Grid.Row="1" BackgroundColor="LightBlue">
+        <Frame >
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#EFF8E2">
+                <Label Text="Login"
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   Margin="0,0,20,20"
+                   HorizontalOptions="Center"/>
+
+                <Label Text="Username"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,15,10,0"/>
+                <Frame HorizontalOptions="FillAndExpand">
+                    <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Entry x:Name="Username"
+                               Placeholder="Username" 
+                               HorizontalOptions="FillAndExpand"
+                               WidthRequest="250"
+                               HeightRequest="40"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               Margin="0,0,20,10"/>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Password"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,0,20,10"/>
+                <Frame HorizontalOptions="FillAndExpand">
+                    <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Entry x:Name="Password"
+                    Placeholder="Password" 
+                   HorizontalOptions="FillAndExpand"
+                   WidthRequest="250"
+                   HeightRequest="40"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Margin="0,0,20,0"/>
+                    </StackLayout>
+                </Frame>
+                <Button x:Name="btn" Text="Login" BackgroundColor="DarkBlue" Margin="0,15,20,20" HorizontalOptions="Center" IsEnabled="True" Clicked="LoginClick"/>
+
+                <StackLayout>
+                    <Label Text="Haven't registered, click here?" TextColor="Aqua" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="register"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+
+            
+        </Frame>
+        
+    </Grid>
+</ContentPage>

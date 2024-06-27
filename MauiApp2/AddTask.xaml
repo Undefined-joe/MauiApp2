@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.AddTask"
+             Title="Add Task">
+    <ScrollView>
+    <Frame HorizontalOptions="FillAndExpand">
+    <VerticalStackLayout>
+        <Label Text="Task ID"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,15,10,0"/>
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Entry x:Name="TaskID"
+                    Placeholder="Task ID" 
+                    HorizontalOptions="FillAndExpand"
+                    WidthRequest="250"
+                    HeightRequest="40"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Margin="0,0,20,10"/>
+            </StackLayout>
+
+            <Label Text="Task Name"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,15,10,0"/>
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Entry x:Name="TaskName"
+                   Placeholder="Task Name" 
+                   HorizontalOptions="FillAndExpand"
+                   WidthRequest="250"
+                   HeightRequest="40"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Margin="0,0,20,10"/>
+            </StackLayout>
+
+            <Label Text="Task Assigned to"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,15,10,0"/>
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Entry x:Name="TaskAssignedto"
+                   Placeholder="Task Assigned to:" 
+                   HorizontalOptions="FillAndExpand"
+                   WidthRequest="250"
+                   HeightRequest="40"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Margin="0,0,20,10"/>
+            </StackLayout>
+            <Label Text="Task Category"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,15,10,0"/>
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Picker x:Name="TaskCategory"
+                   Title="Select Task Category"
+                   HorizontalOptions="FillAndExpand"
+                   WidthRequest="250"
+                   HeightRequest="40"
+                   Margin="0,0,20,10">      
+                   <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Animal Care</x:String>
+                            <x:String>Reporting</x:String>
+                            <x:String>Quarantine</x:String>
+                        </x:Array>
+                   </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+
+            <Button x:Name="btnSubmitTask" Text="Submit Task" BackgroundColor="DarkBlue" Margin="0,15,20,20" HorizontalOptions="Center" IsEnabled="True" Clicked="SubmitTaskClick"/>
+        </VerticalStackLayout>
+    </Frame>
+    </ScrollView>
+</ContentPage>

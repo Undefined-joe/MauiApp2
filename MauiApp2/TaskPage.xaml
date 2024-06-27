@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.TaskPage"
+             Title="Task Page">
+    <VerticalStackLayout>
+        <ScrollView>
+            <StackLayout Padding="10" Spacing="20">
+                <Label Text="Available tasks: 4" Padding="10"/>
+                <Frame>
+                    <Button Text="Feed the animals" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False"/>
+                </Frame>
+                <Frame>
+                    <Entry Text="Medicate animals" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False"/>
+                </Frame>
+                <Frame>
+                    <Entry Text="Do health report on animal C021" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False"/>
+                </Frame>
+                <Frame>
+                    <Entry Text="Bathe animals" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False"/>
+                </Frame>
+
+
+            </StackLayout>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>

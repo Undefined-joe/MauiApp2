@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.DashboardPage"
+             Title="Dashboard"
+             Shell.BackgroundColor="WhiteSmoke">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="White">
+        <StackLayout Padding="20">
+            <VerticalStackLayout Spacing="20">
+                <Frame BackgroundColor="DarkBlue" CornerRadius="15" HeightRequest="150" WidthRequest="150" HasShadow="False">
+                    <Label Text="Available Tasks" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="taskPress"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+                <Frame BackgroundColor="DarkBlue" CornerRadius="15" HeightRequest="150" WidthRequest="150" HasShadow="False">
+                    <Label Text="Animal Health Report" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="QuestPress"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+
+                <Frame BackgroundColor="DarkBlue" CornerRadius="15" HeightRequest="150" WidthRequest="150" HasShadow="False">
+                    <Label Text="Add New Animal" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="NewPress"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+
+                <Frame BackgroundColor="DarkBlue" CornerRadius="15" HeightRequest="150" WidthRequest="150" HasShadow="False">
+                    <Label Text="Add Task" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="addTask"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+            </VerticalStackLayout>
+        </StackLayout>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.AddNewAnimal"
+             Title="Add New Animal">
+    <ScrollView>
+        <Frame>
+            <VerticalStackLayout>
+                <Label 
+            Text="Please fill in the form below to add a new worker:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+                <Label Text="Animal ID"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,15,10,0"/>
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Entry x:Name="AnimalID"
+                Placeholder="Animal ID" 
+                HorizontalOptions="FillAndExpand"
+                WidthRequest="250"
+                HeightRequest="40"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Margin="0,0,20,10"/>
+                </StackLayout>
+
+                <Label Text="Animal Spicies"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,15,10,0"/>
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Entry x:Name="AnimalSpicies"
+               Placeholder="Animal Spicies" 
+               HorizontalOptions="FillAndExpand"
+               WidthRequest="250"
+               HeightRequest="40"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,0,20,10"/>
+                </StackLayout>
+
+                <Label Text="Animal Gender"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,15,10,0"/>
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Entry x:Name="AnimalGender"
+               Placeholder="Animal Gender:" 
+               HorizontalOptions="FillAndExpand"
+               WidthRequest="250"
+               HeightRequest="40"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,0,20,10"/>
+                </StackLayout>
+                <Label Text="Animal Breed"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,15,10,0"/>
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Entry x:Name="AnimalBreed"
+                Placeholder="Animal Breed" 
+                HorizontalOptions="FillAndExpand"
+                WidthRequest="250"
+                HeightRequest="40"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Margin="0,0,20,10"/>
+                </StackLayout>
+
+                <Label Text="Animal Colour"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,15,10,0"/>
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Entry x:Name="AnimalColour"
+               Placeholder="Animal Colour" 
+               HorizontalOptions="FillAndExpand"
+               WidthRequest="250"
+               HeightRequest="40"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,0,20,10"/>
+                </StackLayout>
+
+                <Label Text="Animal Health Status"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,15,10,0"/>
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Entry x:Name="AnimalStatus"
+               Placeholder="Animal Health Status:" 
+               HorizontalOptions="FillAndExpand"
+               WidthRequest="250"
+               HeightRequest="40"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,0,20,10"/>
+                </StackLayout>
+
+                <Label Text="Animal Weight"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,15,10,0"/>
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Entry x:Name="AnimalWeight"
+               Placeholder="Animal Weight:" 
+               HorizontalOptions="FillAndExpand"
+               WidthRequest="250"
+               HeightRequest="40"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,0,20,10"/>
+                </StackLayout>
+
+                <Label Text="Animal Height"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,15,10,0"/>
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Entry x:Name="AnimalHeight"
+               Placeholder="Animal Height:" 
+               HorizontalOptions="FillAndExpand"
+               WidthRequest="250"
+               HeightRequest="40"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,0,20,10"/>
+                </StackLayout>
+
+                <Label Text="Animal Age"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,15,10,0"/>
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Entry x:Name="AnimalAge"
+               Placeholder="AnimalAge:" 
+               HorizontalOptions="FillAndExpand"
+               WidthRequest="250"
+               HeightRequest="40"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,0,20,10"/>
+                </StackLayout>
+
+                <Label Text="Date Acquired"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,15,10,0"/>
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <DatePicker x:Name="DateAcquired"
+               Format="D"
+               HorizontalOptions="FillAndExpand"
+               WidthRequest="250"
+               HeightRequest="40"
+               Margin="0,0,20,10"/>
+                </StackLayout>
+
+                <Button x:Name="btnSubmitAnimal" Text="Submit Animal" BackgroundColor="DarkBlue" Margin="0,15,20,20" HorizontalOptions="Center" IsEnabled="True" Clicked="btnSubmitAnimal_Clicked"/>
+
+            </VerticalStackLayout>
+        </Frame>
+    </ScrollView>
+</ContentPage>
