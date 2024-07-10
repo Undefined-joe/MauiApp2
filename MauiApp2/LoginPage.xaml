@@ -2,66 +2,74 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.LoginPage"
-             Title="LoginPage"
-             BackgroundColor="LightBlue">
+                         Title="LoginPage"
+             Shell.NavBarIsVisible="False">
 
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Image Source="https://www.morethancalendars.co.uk/uploads/images/Gallery/Farming-Portrait/Farming_65.jpg"
+               Aspect="AspectFill"
+               Opacity="0.9"
+               IsEnabled="False"/>
 
-    <Grid Grid.Row="1" BackgroundColor="LightBlue">
-        <Frame >
-            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#EFF8E2">
-                <Label Text="Login"
-                   FontSize="40"
-                   FontAttributes="Bold"
-                   Margin="0,0,20,20"
-                   HorizontalOptions="Center"/>
+        <StackLayout>
+            <Frame BackgroundColor="SkyBlue" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,100,0,0" HorizontalOptions="Center">
+                <Image Source="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png" Aspect="AspectFill" Margin="0"/>
+            </Frame>
+        </StackLayout>
 
-                <Label Text="Username"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   Margin="0,15,10,0"/>
-                <Frame HorizontalOptions="FillAndExpand">
-                    <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Entry x:Name="Username"
-                               Placeholder="Username" 
-                               HorizontalOptions="FillAndExpand"
-                               WidthRequest="250"
-                               HeightRequest="40"
-                               TextColor="Black"
-                               FontAttributes="Bold"
-                               Margin="0,0,20,10"/>
+        <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Text="Welcome!" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
+            <Label Grid.Row="2" Text="Log in" HorizontalOptions="Center" FontSize="Subtitle"/>
+
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                <Frame BackgroundColor="Transparent" BorderColor="Black" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="Beige" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="0">
+                            <Image Source="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                        <Entry x:Name="Username" Text="{Binding UsernName}" Placeholder="Username" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                     </StackLayout>
                 </Frame>
-                <Label Text="Password"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                       HorizontalOptions="Center"
-                       Margin="0,0,20,10"/>
-                <Frame HorizontalOptions="FillAndExpand">
-                    <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Entry x:Name="Password"
-                    Placeholder="Password" 
-                   HorizontalOptions="FillAndExpand"
-                   WidthRequest="250"
-                   HeightRequest="40"
-                   TextColor="Black"
-                   FontAttributes="Bold"
-                   Margin="0,0,20,0"/>
+                <Frame BackgroundColor="Transparent" BorderColor="Black" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="Beige" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="0">
+                            <Image Source="https://e7.pngegg.com/pngimages/778/12/png-clipart-computer-icons-skype-icon-design-change-password-logo-internet.png" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                        <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password" IsPassword="True" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                     </StackLayout>
                 </Frame>
-                <Button x:Name="btn" Text="Login" BackgroundColor="DarkBlue" Margin="0,15,20,20" HorizontalOptions="Center" IsEnabled="True" Clicked="LoginClick"/>
 
-                <StackLayout>
-                    <Label Text="Haven't registered, click here?" TextColor="Aqua" >
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0" Padding="0">
+                    <CheckBox IsChecked="False"/>
+                    <Label Text="Remeber Me    " TextColor="Gray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Forgot Password" TextColor="Black" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <Button Text="LOGIN" BackgroundColor="Black" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0" Command="{Binding LoginCommand}" Clicked="LoginClick"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" Padding="0">
+                    <Label Text="New User? " TextColor="Gray" FontSize="Small"/>
+                    <Label Text="Register Here" TextColor="Black" FontAttributes="Bold" FontSize="Small">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="register"/>
                         </Label.GestureRecognizers>
                     </Label>
                 </StackLayout>
             </StackLayout>
-
-            
-        </Frame>
-        
+        </Grid>
     </Grid>
 </ContentPage>

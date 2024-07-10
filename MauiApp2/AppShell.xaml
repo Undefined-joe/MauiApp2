@@ -17,7 +17,7 @@
         <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate views:DashboardPage}"/>
         <ShellContent Title="Tasks" ContentTemplate="{DataTemplate views:TaskPage}"/>
         <ShellContent Title="Add Task" ContentTemplate="{DataTemplate views:AddTask}"/>
-        <ShellContent Title="Animal Health Report" ContentTemplate="{DataTemplate views:AddAnimalPage}"/>
+        <ShellContent Title="Animal Health Report" ContentTemplate="{DataTemplate views:Questionaire}"/>
         <ShellContent Title="Add New Animal" ContentTemplate="{DataTemplate views:AddNewAnimal}"/>
     </FlyoutItem>
 

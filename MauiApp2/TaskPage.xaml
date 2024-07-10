@@ -5,20 +5,8 @@
              Title="Task Page">
     <VerticalStackLayout>
         <ScrollView>
-            <StackLayout Padding="10" Spacing="20">
-                <Label Text="Available tasks: 4" Padding="10"/>
-                <Frame>
-                    <Button Text="Feed the animals" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False"/>
-                </Frame>
-                <Frame>
-                    <Entry Text="Medicate animals" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False"/>
-                </Frame>
-                <Frame>
-                    <Entry Text="Do health report on animal C021" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False"/>
-                </Frame>
-                <Frame>
-                    <Entry Text="Bathe animals" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False"/>
-                </Frame>
+            <StackLayout x:Name="populate" Padding="10" Spacing="20">
+
 
 
             </StackLayout>
